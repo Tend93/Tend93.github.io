@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DMRM</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/template.css" rel="stylesheet">
+    <script type="text/javascript"><!-- 
+    function obfuscate( domain, name ) { document.write('<a href="mai' + 
+    'lto:' + name + '@' + domain + '">' + name + '@' + domain + '</' + 'a>'); }
+    // --></script>
+	
+  </head>
+  <body>
+	
+
+
+    <div class="container">
+
+    <div class="home-intro">
+      <div class="row">
+          <h1 align="center">Catching the Temporal Regions-of-Interest for Video Captioning</h1>
+		  <h4 align="center">Authors: Ziwei Yang, <a href="http://www.tjucs.win/faculty/hanyahong/index.html">Yahong han</a>, Zheng Wang</h4>
+      </div>
+          <div class="highlight-box">
+           <h2>
+           <div class="center-pills">
+           <ul class="nav nav-pills">
+          <li role="presentation"> <a href="index.html#abstract">Abstract</a></li> 
+          <li role="presentation"> <a href="index.html#overview">Overview</a></li> 
+          <li role="presentation"> <a href="index.html#examples">Examples</a></li>
+          <li role="presentation"> <a href="index.html#code">Code</a></li> 
+          <li role="presentation"> <a href="index.html#refs">Reference</a></li>
+           </ul>
+          </div>
+          </h2>
+          </div>
+		 <a name="abstract"></a>
+          <h2>Abstract</h2>
+          <div class="project-page well" >
+         
+          <p class="text-justify" style="font-size:16px;">
+    As a crucial challenge for video understanding, exploiting the
+spatial-temporal structure of video has attracted much attention
+recently, especially on video captioning. Inspired by the insight
+that people always focus on certain interested regions of video
+content, we propose a novel approach which will automatically
+focus on regions-of-interest and catch their temporal structures. In
+our approach, we utilize a specific attention model to adaptively select
+regions-of-interest for each video frame. Then a Dual Memory
+Recurrent Model (DMRM) is introduced to incorporate temporal
+structure of global features and regions-of-interest features in parallel,
+which will obtain rough understanding of video content and
+particular information of regions-of-interest. Since the attention
+model could not always catch the right interests, we additionally
+adopt semantic supervision to attend to interested regions more
+reasonably. We evaluate our method for video captioning on two
+public benchmarks: Microsoft Video Description Corpus (MSVD)
+and Montreal Video Annotation (M-VAD). The experiments demonstrate
+that catching temporal regions-of-interest information really
+enhances the representation of input videos and our approach obtains
+the state-of-the-art results on popular evaluation metrics like
+BLEU-4, CIDEr, and METEOR.
+          </p>
+		 
+          </div>
+ <a href="./imgs/ACMMM2017_yang.pdf" class="btn btn-danger" role="button">View PDF</a>
+    <hr class="soften"></hr>
+
+          <div class="project-page">
+          <a name="overview"></a>
+          <h2>Overview</h2>
+          <center>
+          <div class="approachimg">
+            <img class="center-block" src="./imgs/framework.png" style=""></img>
+          </div>
+          <p class="lead">An overview of the proposed approach.</p>
+          </center>
+          </div>
+
+    <hr class="soften"></hr>
+
+          <div class="project-page">
+          <a name="examples"></a>
+          <h2>Examples</h2>
+          <center>
+          <div class="">
+            <div class="approachimg">
+            <img class="center-block"
+            src="./imgs/DMRM_simple.png"
+            ></img>
+            </div>
+            <p class="lead">
+            Examples about Temporal Regions-of-Interest.
+            </p>
+          </div>
+          <div class="">
+            <div class="approachimg">
+             <img class="center-block"
+            src="./imgs/DMRM_sp.png"
+            ></img>
+            </div>
+            <p class="lead">
+            Some Examples of Our Methods.
+            </p>
+          </div>
+          </center>
+          </div>
+
+    <hr class="soften"></hr>
+
+          <div class="project-page">
+          <a name="code"></a>
+          <h2>Code</h2>
+          <p class="lead">
+           The code will be released soon.
+		   <br/>
+           Our experiments are implemented using the <a href="http://torch.ch/">Torch Framework</a>.
+          </p>
+      
+          <h2>Datasets</h2>
+          <p class="lead">
+            The datasets used in the paper are available at the following links:
+          </br>
+          <dl style="font-size:16px;">
+            <b>Microsoft Video Description Corpus (MSVD or Youtube2text):</b>
+            </br>
+            <a
+            href="http://www.cs.utexas.edu/users/ml/clamp/videoDescription/">Raw Data
+            Page - http://www.cs.utexas.edu/users/ml/clamp/videoDescription/</a>
+            </br><a
+            href="http://research.microsoft.com/en-us/downloads/38cf15fd-b8df-477e-a4e4-a4680caa75af/default.aspx">[Raw Corpus]</a>
+            <a
+            href="https://www.dropbox.com/sh/4ecwl7zdha60xqo/AAC_TAsR7SkEYhkSdAFKcBlMa?dl=0">[Processed Data]</a>
+			</br>
+			Attention:The processed data is not ours. We just use the processed corpus from this page.
+            </br>
+			</br>
+            <b>Montreal Video Annotation Description (M-VAD) Dataset:</b>
+            </br>
+            <a
+            href="http://www.mila.umontreal.ca/Home/public-datasets/montreal-video-annotation-dataset">http://www.mila.umontreal.ca/Home/public-datasets/montreal-video-annotation-dataset</a>
+            </br>
+            </dl>
+          </p>
+          </div>
+
+    <hr class="soften"></hr>
+
+          <div class="project-page">
+          <a name="refs"></a>
+          <h2>Reference</h2>
+          <p class="lead">
+          If you find this useful in your work, please consider citing the following reference:
+          <div class="highlight">
+          <pre> <code>
+          @inproceedings{dmrmyangMM17,
+          title = {Catching the Temporal Regions-of-Interest for Video Captioning},
+          author = {Ziwei, Yang and Yahong, Han and Zheng, Wang},
+          booktitle = {Proceedings of the ACM International Conference on Multimedia (ACM MM)},
+          year = {2017}
+          }
+ </code> </pre> 
+          </div>
+
+    </div>
+    </div> <!--container-->
+
+   
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/toggle.js"></script>
+  </body>
+</html>
+
