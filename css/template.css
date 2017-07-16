@@ -1,9 +1,9 @@
   body {
-  padding-top: 10px;
+  padding-top: 50px;
 } 
 @media (min-width: 768px) {
   .home-intro {
-    padding: 100px 50px;
+    padding: 125px 100px;
   }
 }
 /** Modified Responsive CSS **/
